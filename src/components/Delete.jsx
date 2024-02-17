@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import SimpsonsItem from "./SimpsonsItem";
 
-class Simpsons extends Component {
+class Delete extends Component {
   render() {
     return this.props.simpsons.map((item, index) => {
       return (
         <SimpsonsItem
           {...item}
+          onLike={this.props.onLike}
           onDeleteItem={this.props.onDeleteItem}
           index={index}
         />
@@ -15,4 +16,4 @@ class Simpsons extends Component {
   }
 }
 
-export default Simpsons;
+export default Delete;
